@@ -1,8 +1,9 @@
-<!-- 
+<!--
  Copyright (c) 2014, Juraj Bubniak
+ This code is based on Juraj Bubniak's (https://github.com/jbub/reversi-js)
  modified by Jiro Shimaya at 2018/12/27
  -->
- 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,14 +35,17 @@
 	<option value=18>18x18</option>
 	<option value=20>20x20</option>
 	</select>
+	<br><br><br>
+	<p style='color:gray'>作成者: Jiro Shimaya (https://github.com/JiroShimaya/)</p>
+	<p style='color:gray'>基本的なオセロ機能・見た目の拝借元 -> https://github.com/jbub/reversi-js</p>
 </body>
 <script src="js/reversi.js"></script>
-<script> 
+<script>
 	window.onload = function() {
-         
+
 		reversi.init('playground');
 	};
-	
+
 	$('select[name=size]').on('change',function(eo){
 		var size = $(this).val();
 		reversi.setSize(size,size);
